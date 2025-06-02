@@ -1,8 +1,5 @@
 <template>
-  <UApp>
-    <TopBar />
-    <RouterView />
-  </UApp>
+  <div>404</div>
 </template>
 
 <script setup lang="ts"></script>

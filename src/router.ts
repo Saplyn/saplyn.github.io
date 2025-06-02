@@ -1,13 +1,11 @@
 import {
-  createMemoryHistory,
   createRouter,
+  createWebHistory,
   type RouteRecordRaw,
 } from "vue-router";
-import Homepage from "./routes/Homepage.vue";
-import AboutPage from "./routes/AboutPage.vue";
-import type { NavigationMenuItem } from "@nuxt/ui";
-
-// LYN: Routes
+import Homepage from "@/routes/Homepage.vue";
+import AboutPage from "@/routes/AboutPage.vue";
+import NotFoundPage from "@/routes/NotFoundPage.vue";
 
 declare module "vue-router" {
   interface RouteMeta {
@@ -32,40 +30,10 @@ export const routes: RouteRecordRaw[] = [
     },
     component: AboutPage,
   },
+  { path: "/:pathMatch(.*)*", name: "404 Not Found", component: NotFoundPage },
 ];
 
 export const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes,
 });
-
-function routeAt(path: string): RouteRecordRaw | undefined {
-  return routes.find((route) => route.path == path);
-}
-
-// LYN: Navigations
-
-export const navigations: NavigationMenuItem[] = [
-  asNavigation(routeAt("/")!),
-  asNavigation(routeAt("/about")!),
-  {
-    label: "Links",
-    icon: "material-symbols:link-rounded",
-    children: [
-      {
-        label: "GitHub",
-        icon: "i-simple-icons:github",
-        to: "https://github.com/Saplyn",
-        target: "_blank",
-      },
-    ],
-  },
-];
-
-function asNavigation(route: RouteRecordRaw): NavigationMenuItem {
-  return {
-    label: route.name?.toString(),
-    to: route.path,
-    icon: route.meta?.icon,
-  };
-}
