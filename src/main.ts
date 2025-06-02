@@ -1,6 +1,8 @@
-import "./assets/tailwind.css";
+import "./assets/main.css";
 
 import { createApp } from "vue";
 import App from "./App.vue";
+import ui from "@nuxt/ui/vue-plugin";
+import { router } from "./router";
 
-createApp(App).mount("#app");
+createApp(App).use(ui).use(router).mount("#app");
