@@ -9,6 +9,7 @@ import NotFoundPage from "@/routes/NotFoundPage.vue";
 
 declare module "vue-router" {
   interface RouteMeta {
+    id: string;
     icon?: string;
   }
 }
@@ -18,6 +19,7 @@ export const routes: RouteRecordRaw[] = [
     name: "Homepage",
     path: "/",
     meta: {
+      id: "home",
       icon: "material-symbols:home-rounded",
     },
     component: Homepage,
@@ -26,6 +28,7 @@ export const routes: RouteRecordRaw[] = [
     path: "/about",
     name: "About Me",
     meta: {
+      id: "about",
       icon: "material-symbols:pets",
     },
     component: AboutPage,
