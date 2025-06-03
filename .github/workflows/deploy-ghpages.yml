@@ -33,8 +33,8 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Build site
-        run: bun run build
+      - name: List all files
+        run: ls -alF
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
