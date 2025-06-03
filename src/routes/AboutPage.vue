@@ -1,5 +1,5 @@
 <template>
-  <div>About</div>
+  <main class="flex items-center justify-center text-dimmed text-4xl">
+    About
+  </main>
 </template>
-
-<script setup lang="ts"></script>

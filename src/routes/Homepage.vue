@@ -1,5 +1,5 @@
 <template>
-  <div>Homepage</div>
+  <main class="flex items-center justify-center text-dimmed text-4xl">
+    Homepage
+  </main>
 </template>
-
-<script setup lang="ts"></script>

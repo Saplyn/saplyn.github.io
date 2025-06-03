@@ -1,8 +1,16 @@
 <template>
   <UApp>
-    <TopBar />
-    <RouterView />
+    <AppHeader />
+    <RouterView
+      class="min-h-[calc(100vh-var(--footer-height)-var(--header-height))]"
+    />
+    <AppFooter />
   </UApp>
 </template>
 
-<script setup lang="ts"></script>
+<style>
+:root {
+  --header-height: 60px;
+  --footer-height: 70px;
+}
+</style>
