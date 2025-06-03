@@ -11,7 +11,7 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools({
-      launchEditor: "nvim",
+      launchEditor: "echo",
     }),
     tailwindcss(),
     ui(),
