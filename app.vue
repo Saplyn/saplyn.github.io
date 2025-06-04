@@ -1,12 +1,17 @@
 <template>
   <UApp>
-    <AppHeader />
-    <NuxtPage
-      class="min-h-[calc(100vh-var(--footer-height)-var(--header-height))]"
-    />
-    <AppFooter />
+    <NuxtRouteAnnouncer />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </UApp>
 </template>
+
+<script setup lang="ts">
+useHead({
+  title: "Saplyn's Garden",
+});
+</script>
 
 <style>
 :root {
