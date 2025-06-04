@@ -1,14 +1,9 @@
-<template>
-  <UNavigationMenu :items="navigations" />
-</template>
-
-<script setup lang="ts">
 import { routes } from "@/router";
 import type { NavigationMenuItem } from "@nuxt/ui";
 import { ref } from "vue";
 import type { RouteRecordRaw } from "vue-router";
 
-const navigations = ref<NavigationMenuItem[]>([
+export const navigations = ref<NavigationMenuItem[]>([
   asNavigation(routeWithId("home")!),
   asNavigation(routeWithId("about")!),
   {
@@ -30,7 +25,6 @@ const navigations = ref<NavigationMenuItem[]>([
           "Collaborative music performance controlling tool using OSC over TCP(FUDI)",
         target: "_blank",
       },
-
       {
         label: "Yew LMTH",
         icon: "material-symbols:data-object",
@@ -54,4 +48,3 @@ function asNavigation(route: RouteRecordRaw): NavigationMenuItem {
 function routeWithId(id: string): RouteRecordRaw | undefined {
   return routes.find((route) => route.meta?.id === id);
 }
-</script>
