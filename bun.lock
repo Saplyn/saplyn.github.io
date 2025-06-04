@@ -14,8 +14,6 @@
         "vue-router": "^4.5.1",
       },
       "devDependencies": {
-        "@iconify-json/material-symbols": "^1.2.23",
-        "@iconify-json/simple-icons": "^1.2.37",
         "node-gyp": "^11.2.0",
       },
     },
@@ -158,10 +156,6 @@
     "@floating-ui/utils": ["@floating-ui/utils@0.2.9", "", {}, "sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg=="],
 
     "@floating-ui/vue": ["@floating-ui/vue@1.1.6", "", { "dependencies": { "@floating-ui/dom": "^1.0.0", "@floating-ui/utils": "^0.2.9", "vue-demi": ">=0.13.0" } }, "sha512-XFlUzGHGv12zbgHNk5FN2mUB7ROul3oG2ENdTpWdE+qMFxyNxWSRmsoyhiEnpmabNm6WnUvR1OvJfUfN4ojC1A=="],
-
-    "@iconify-json/material-symbols": ["@iconify-json/material-symbols@1.2.23", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-GoNuWl8dVDiVFQq+HEgbOmPW0vTycs7qXgtpfBAx4XgDI4MVwnEIjIcYy/tlzzjMF1TPDwkX5fI1+KIylSdBwQ=="],
-
-    "@iconify-json/simple-icons": ["@iconify-json/simple-icons@1.2.37", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-jZwTBznpYVDYKWyAuRpepPpCiHScVrX6f8WRX8ReX6pdii99LYVHwJywKcH2excWQrWmBomC9nkxGlEKzXZ/wQ=="],
 
     "@iconify/collections": ["@iconify/collections@1.0.555", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-lI82hhzkE4la6zjy/t4hbd6pQtl5HjASxsm+Rzcy6P9B9/2pk1FtnWzjDAaSfdHnc2wCsmZZzZW9jSz2LvtlrQ=="],
 

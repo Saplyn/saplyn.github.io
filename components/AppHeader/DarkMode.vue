@@ -1,6 +1,10 @@
 <template>
   <UPopover mode="hover">
-    <UTooltip text="Color Mode" :content="{ side: 'left' }" :delay-duration="0">
+    <UTooltip
+      :text="`Color Mode (${colorMode.preference})`"
+      :content="{ side: 'left' }"
+      :delay-duration="0"
+    >
       <UButton
         size="lg"
         :icon="colorModeIcon"
@@ -11,31 +15,38 @@
 
     <template #content>
       <div class="flex flex-col">
-        <UButton
-          v-if="colorMode.preference != 'light'"
-          icon="material-symbols:light-mode"
-          size="lg"
-          color="neutral"
-          variant="ghost"
-          @click="setColorMode('light')"
-        />
-        <UButton
-          v-if="colorMode.preference != 'dark'"
-          icon="material-symbols:dark-mode"
-          size="lg"
-          color="neutral"
-          variant="ghost"
-          @click="setColorMode('dark')"
-        />
+        <UTooltip text="Light mode" :content="{ side: 'left' }">
+          <UButton
+            v-if="colorMode.preference != 'light'"
+            icon="material-symbols:light-mode"
+            size="lg"
+            color="neutral"
+            variant="ghost"
+            @click="setColorMode('light')"
+          />
+        </UTooltip>
 
-        <UButton
-          v-if="colorMode.preference != 'system'"
-          icon="material-symbols:computer-outline"
-          size="lg"
-          color="neutral"
-          variant="ghost"
-          @click="setColorMode('system')"
-        />
+        <UTooltip text="Dark mode" :content="{ side: 'left' }">
+          <UButton
+            v-if="colorMode.preference != 'dark'"
+            icon="material-symbols:dark-mode"
+            size="lg"
+            color="neutral"
+            variant="ghost"
+            @click="setColorMode('dark')"
+          />
+        </UTooltip>
+
+        <UTooltip text="Follow system" :content="{ side: 'left' }">
+          <UButton
+            v-if="colorMode.preference != 'system'"
+            icon="material-symbols:computer-outline"
+            size="lg"
+            color="neutral"
+            variant="ghost"
+            @click="setColorMode('system')"
+          />
+        </UTooltip>
       </div>
     </template>
   </UPopover>

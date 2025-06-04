@@ -20,8 +20,6 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@iconify-json/material-symbols": "^1.2.23",
-    "@iconify-json/simple-icons": "^1.2.37",
     "node-gyp": "^11.2.0"
   }
 }
