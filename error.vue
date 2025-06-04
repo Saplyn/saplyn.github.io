@@ -13,7 +13,7 @@
         label="Back to Homepage"
         size="xl"
         class="my-6"
-        @click="$router.push('/')"
+        @click="navigateTo('/')"
       />
     </main>
 
