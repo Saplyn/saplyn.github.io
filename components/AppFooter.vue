@@ -23,7 +23,7 @@ type Link = {
 };
 const links: Link[] = [
   {
-    icon: "i-simple-icons:github",
+    icon: "simple-icons:github",
     to: "https://github.com/Saplyn",
     tooltip: "GitHub",
   },

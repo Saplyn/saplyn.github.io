@@ -1,7 +1,7 @@
 <template>
   <UApp>
     <AppHeader />
-    <RouterView
+    <NuxtPage
       class="min-h-[calc(100vh-var(--footer-height)-var(--header-height))]"
     />
     <AppFooter />

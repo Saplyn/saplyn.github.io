@@ -9,7 +9,7 @@
       </div>
 
       <div class="flex items-center justify-center col-span-3">
-        <AppHeaderWideNav />
+        <AppHeaderNav variant="Wide" />
       </div>
 
       <div class="flex items-center justify-end">
@@ -25,7 +25,7 @@
 
       <div>
         <AppHeaderI18n />
-        <AppHeaderLongNav />
+        <AppHeaderNav variant="Long" />
       </div>
     </div>
   </header>

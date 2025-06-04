@@ -3,7 +3,6 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: ["main"]
-
   workflow_dispatch:
 
 permissions:
@@ -37,15 +36,12 @@ jobs:
         run: bun install
 
       - name: Build site
-        run: bun run build
-
-      - name: Catch all with 404
-        run: ln dist/index.html dist/404.html
+        run: bunx nuxt build --preset github_pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: ./.output/public
 
       - name: Deploy to GitHub Pages
         id: deployment

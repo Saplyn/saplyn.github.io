@@ -1,21 +1,44 @@
-import { routes } from "@/router";
-import type { NavigationMenuItem } from "@nuxt/ui";
-import { ref } from "vue";
-import type { RouteRecordRaw } from "vue-router";
+<template>
+  <AppHeaderNavWide
+    v-if="props.variant === 'Wide'"
+    :navigations="navigations"
+  />
 
-export const navigations = ref<NavigationMenuItem[]>([
-  asNavigation(routeWithId("home")!),
-  asNavigation(routeWithId("about")!),
+  <AppHeaderNavLong
+    v-if="props.variant === 'Long'"
+    :navigations="navigations"
+  />
+</template>
+
+<script setup lang="ts">
+import { AppHeaderNavLong } from "#components";
+import type { NavigationMenuItem } from "@nuxt/ui";
+
+const props = defineProps<{
+  variant: "Wide" | "Long";
+}>();
+
+const navigations = ref<NavigationMenuItem[]>([
+  {
+    label: "Homepage",
+    to: "/",
+    icon: "material-symbols:home-rounded",
+  },
+  {
+    label: "About Me",
+    to: "/about",
+    icon: "material-symbols:pets",
+  },
   {
     label: "Notebook",
-    icon: "simple-icons:mdbook",
+    icon: "material-symbols:book-4",
     to: "https://saplyn.github.io/notebook/",
     description: "My personal knowledge base, written in English.",
     target: "_blank",
   },
   {
     label: "Projects",
-    icon: "ri:git-repository-fill",
+    icon: "material-symbols:sdk",
     children: [
       {
         label: "Vibe Kit",
@@ -36,15 +59,4 @@ export const navigations = ref<NavigationMenuItem[]>([
     ],
   },
 ]);
-
-function asNavigation(route: RouteRecordRaw): NavigationMenuItem {
-  return {
-    label: route.name?.toString(),
-    to: route.path,
-    icon: route.meta?.icon,
-  };
-}
-
-function routeWithId(id: string): RouteRecordRaw | undefined {
-  return routes.find((route) => route.meta?.id === id);
-}
+</script>

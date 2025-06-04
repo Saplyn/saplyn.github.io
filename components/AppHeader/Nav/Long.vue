@@ -1,5 +1,9 @@
 <template>
-  <USlideover side="top" title="Navigation">
+  <USlideover
+    side="top"
+    title="Navigation"
+    trailing-icon="material-symbols:keyboard-arrow-down-rounded"
+  >
     <UButton
       size="md"
       icon="material-symbols:menu"
@@ -14,5 +18,9 @@
 </template>
 
 <script setup lang="ts">
-import { navigations } from "@/navigation";
+import type { NavigationMenuItem } from "@nuxt/ui";
+
+defineProps<{
+  navigations: NavigationMenuItem[];
+}>();
 </script>
