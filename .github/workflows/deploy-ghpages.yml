@@ -39,6 +39,9 @@ jobs:
       - name: Build site
         run: bun run build
 
+      - name: Catch all with 404
+        run: ln dist/index.html dist/404.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
