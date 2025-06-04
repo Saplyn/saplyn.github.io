@@ -13,6 +13,7 @@
       </div>
 
       <div class="flex items-center justify-end">
+        <AppHeaderDarkMode />
         <AppHeaderI18n />
       </div>
     </div>
@@ -24,6 +25,7 @@
       <AppHeaderLogo />
 
       <div>
+        <AppHeaderDarkMode />
         <AppHeaderI18n />
         <AppHeaderNav variant="Long" />
       </div>

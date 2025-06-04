@@ -4,12 +4,14 @@
     title="Navigation"
     trailing-icon="material-symbols:keyboard-arrow-down-rounded"
   >
-    <UButton
-      size="md"
-      icon="material-symbols:menu"
-      color="neutral"
-      variant="ghost"
-    />
+    <UTooltip text="Navigation" :content="{ side: 'left' }" :delay-duration="0">
+      <UButton
+        size="lg"
+        icon="material-symbols:menu"
+        color="neutral"
+        variant="ghost"
+      />
+    </UTooltip>
 
     <template #body>
       <UNavigationMenu :items="navigations" orientation="vertical" />
