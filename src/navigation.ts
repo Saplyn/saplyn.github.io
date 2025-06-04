@@ -28,7 +28,7 @@ export const navigations = ref<NavigationMenuItem[]>([
       {
         label: "Yew LMTH",
         icon: "material-symbols:data-object",
-        to: "https://github.com/Saplyn/yew-lmth",
+        to: "https://lib.rs/crates/yew-lmth",
         description:
           "A macro crate for writing HTML-like syntax for Yew application, inspired by Sycamore and Dioxus.",
         target: "_blank",
