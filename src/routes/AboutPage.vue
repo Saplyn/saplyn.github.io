@@ -1,5 +1,8 @@
 <template>
-  <main class="flex items-center justify-center text-dimmed text-4xl">
-    About
+  <main>
+    <PageDivision></PageDivision>
+    <PageDivision muted></PageDivision>
+    <PageDivision></PageDivision>
+    <PageDivision muted></PageDivision>
   </main>
 </template>

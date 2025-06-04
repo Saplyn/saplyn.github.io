@@ -2,7 +2,7 @@
   <UPopover mode="hover">
     <UButton
       size="md"
-      icon="material-symbols:translate"
+      icon="material-symbols:language"
       color="neutral"
       variant="ghost"
     />
