@@ -1,8 +1,5 @@
 <template>
-  <UNavigationMenu
-    :items="navigations"
-    trailing-icon="material-symbols:keyboard-arrow-down-rounded"
-  />
+  <UNavigationMenu :items="navigations" />
 </template>
 
 <script setup lang="ts">

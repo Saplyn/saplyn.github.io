@@ -1,9 +1,5 @@
 <template>
-  <USlideover
-    side="top"
-    title="Navigation"
-    trailing-icon="material-symbols:keyboard-arrow-down-rounded"
-  >
+  <USlideover side="top" title="Navigation">
     <UTooltip text="Navigation" :content="{ side: 'left' }" :delay-duration="0">
       <UButton
         size="lg"
